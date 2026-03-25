@@ -3,6 +3,7 @@ from PyQt6.QtWidgets import (
     QMainWindow, QWidget, QHBoxLayout, QVBoxLayout, QPushButton,
     QLineEdit, QFileDialog, QProgressBar, QMessageBox, QLabel
 )
+from PyQt6.QtGui import QIcon
 from PyQt6.QtCore import Qt, pyqtSignal
 from .sidebar import Sidebar
 from .content_area import ContentArea
@@ -12,7 +13,8 @@ from core.data_manager import DataManager
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Video Keyword Extractor - Deşifre Programı")
+        self.setWindowTitle("Video Keyword Extractor - Deşifre Programı | Developed by Muhammet Yayla")
+        self.setWindowIcon(QIcon("images/icon.jpg"))
         self.resize(1200, 800)
         
         self.data_manager = DataManager()
@@ -33,7 +35,11 @@ class MainWindow(QMainWindow):
         right_layout.setContentsMargins(10, 10, 10, 10)
         
         # Top bar
-        top_bar_layout = QHBoxLayout()
+        # Top bar container
+        self.top_bar_container = QWidget()
+        top_bar_main_layout = QHBoxLayout(self.top_bar_container)
+        top_bar_main_layout.setContentsMargins(0, 0, 0, 0)
+        
         self.btn_upload_file = QPushButton("Dosya Yükle")
         self.btn_upload_file.setMinimumHeight(35)
         
@@ -50,12 +56,12 @@ class MainWindow(QMainWindow):
         self.search_result_label = QLabel("")
         self.search_result_label.setStyleSheet("color: #ffffff; padding: 0 10px; font-weight: bold;")
         
-        top_bar_layout.addWidget(self.btn_upload_file)
-        top_bar_layout.addWidget(self.btn_upload_folder)
-        top_bar_layout.addSpacing(20)
-        top_bar_layout.addWidget(self.search_bar_top, stretch=1)
-        top_bar_layout.addWidget(self.search_result_label)
-        top_bar_layout.addWidget(self.search_button)
+        top_bar_main_layout.addWidget(self.btn_upload_file)
+        top_bar_main_layout.addWidget(self.btn_upload_folder)
+        top_bar_main_layout.addSpacing(20)
+        top_bar_main_layout.addWidget(self.search_bar_top, stretch=1)
+        top_bar_main_layout.addWidget(self.search_result_label)
+        top_bar_main_layout.addWidget(self.search_button)
         
         # Progress bar (hidden by default)
         self.progress_bar = QProgressBar()
@@ -63,7 +69,7 @@ class MainWindow(QMainWindow):
         self.progress_bar.setTextVisible(True)
         self.progress_bar.setMinimumHeight(25)
         
-        right_layout.addLayout(top_bar_layout)
+        right_layout.addWidget(self.top_bar_container)
         right_layout.addWidget(self.progress_bar)
         right_layout.addWidget(self.content_area, stretch=1)
         
@@ -75,6 +81,7 @@ class MainWindow(QMainWindow):
         self.btn_upload_file.clicked.connect(self.upload_file)
         self.btn_upload_folder.clicked.connect(self.upload_folder)
         self.content_area.file_dropped.connect(self.start_transcription)
+        self.content_area.fullscreen_requested.connect(self.toggle_fullscreen_mode)
         self.sidebar.history_item_clicked.connect(self.load_history_item)
         self.search_button.clicked.connect(self.search_current_text)
         self.search_bar_top.returnPressed.connect(self.search_current_text)
@@ -158,3 +165,15 @@ class MainWindow(QMainWindow):
                 self.search_result_label.setText("Bulunamadı")
         else:
             self.search_result_label.setText("")
+            
+    def toggle_fullscreen_mode(self, is_fs):
+        if is_fs:
+            self.sidebar.setVisible(False)
+            self.top_bar_container.setVisible(False)
+            self.content_area.set_fullscreen_layout(True)
+            self.showFullScreen()
+        else:
+            self.sidebar.setVisible(True)
+            self.top_bar_container.setVisible(True)
+            self.content_area.set_fullscreen_layout(False)
+            self.showNormal()

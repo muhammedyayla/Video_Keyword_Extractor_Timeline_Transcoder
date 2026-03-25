@@ -74,6 +74,7 @@ class DragDropArea(QLabel):
 
 class ContentArea(QWidget):
     file_dropped = pyqtSignal(list)
+    fullscreen_requested = pyqtSignal(bool)
     
     def __init__(self):
         super().__init__()
@@ -87,6 +88,9 @@ class ContentArea(QWidget):
         self.splitter = QSplitter(Qt.Orientation.Vertical)
         self.transcript_view = TranscriptView()
         self.video_player = VideoPlayer()
+        
+        # Bubble up signal
+        self.video_player.fullscreen_requested.connect(self.fullscreen_requested.emit)
         
         # Give specific stretch indices so text view gets space
         self.splitter.addWidget(self.transcript_view)
@@ -111,3 +115,9 @@ class ContentArea(QWidget):
         if self.splitter.isVisible():
             return self.transcript_view.search_and_highlight(query)
         return (0, 0)
+        
+    def set_fullscreen_layout(self, is_fs):
+        if is_fs:
+            self.transcript_view.setVisible(False)
+        else:
+            self.transcript_view.setVisible(True)

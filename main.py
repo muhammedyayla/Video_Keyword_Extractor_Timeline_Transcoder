@@ -1,18 +1,44 @@
 import sys
 import os
+import ctypes
+
+# Fix for PyInstaller and Torch DLLs on Windows (WinError 1114)
+# This must happen BEFORE importing torch
+if getattr(sys, 'frozen', False):
+    # PyInstaller's internal path
+    base_path = getattr(sys, '_MEIPASS', os.path.dirname(sys.executable))
+    # Add torch\lib to DLL search path
+    for torch_lib_path in [
+        os.path.join(base_path, "_internal", "torch", "lib"),
+        os.path.join(base_path, "torch", "lib")
+    ]:
+        if os.path.exists(torch_lib_path):
+            try:
+                os.add_dll_directory(torch_lib_path)
+            except Exception:
+                pass
 
 # Import whisper and torch FIRST to prevent DLL conflicts with PyQt6 on Windows
 import torch
 import whisper
 
 from PyQt6.QtWidgets import QApplication
+from PyQt6.QtGui import QIcon
 from ui.main_window import MainWindow
 
 def main():
+    # Fix Taskbar Icon on Windows
+    try:
+        myappid = 'muhammedyayla.video.keyword.extractor.1.0'
+        ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
+    except Exception:
+        pass
+
     # Make sure transcriptions directory exists
     os.makedirs("transcriptions", exist_ok=True)
     
     app = QApplication(sys.argv)
+    app.setWindowIcon(QIcon("images/icon.jpg"))
     
     # Optional: Apply some basic styling for modern look
     app.setStyle("Fusion")
@@ -20,8 +46,8 @@ def main():
     # Global palette requested by user: #b32d24, #000000, #ffffff, #564d4d, #831010
     dark_stylesheet = """
     QMainWindow, QWidget {
-        background-color: #000000;
-        color: #ffffff;
+        background-color: #171717;
+        color: #f2f2f2;
     }
     QPushButton {
         background-color: #831010;
