@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual Environments
+venv/
+env/
+.env
+
+# Transcriptions and Media
+transcriptions/
+*.mp4
+*.mkv
+*.avi
+*.mov
+
+# Large Binary Files (FFmpeg etc.)
+ffmpeg.exe
+ffprobe.exe
+ffplay.exe
+
+# OS Files
+.DS_Store
+Thumbs.db
