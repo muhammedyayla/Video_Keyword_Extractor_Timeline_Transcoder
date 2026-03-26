@@ -91,7 +91,7 @@ class MainWindow(QMainWindow):
         self.pending_queue = [] # for folder uploading
         
     def upload_file(self):
-        file_path, _ = QFileDialog.getOpenFileName(self, "Video Seç", "", "Video Dosyaları (*.mp4 *.mkv *.avi *.mov)")
+        file_path, _ = QFileDialog.getOpenFileName(self, "Video Seç", "", "Video Dosyaları (*.mp4 *.mkv *.mxf *.avi *.mov)")
         if file_path:
             self.start_transcription([file_path])
             
@@ -100,7 +100,7 @@ class MainWindow(QMainWindow):
         if folder_path:
             video_files = []
             for f in os.listdir(folder_path):
-                if f.lower().endswith(('.mp4', '.mkv', '.avi', '.mov')):
+                if f.lower().endswith(('.mp4', '.mkv', '.mxf', '.avi', '.mov')):
                     video_files.append(os.path.join(folder_path, f))
             if video_files:
                 self.start_transcription(video_files)
