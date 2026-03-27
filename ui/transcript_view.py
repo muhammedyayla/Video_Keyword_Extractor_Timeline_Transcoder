@@ -14,15 +14,25 @@ class TranscriptView(QWidget):
         self.text_browser = QTextBrowser()
         self.text_browser.setOpenLinks(False)
         self.text_browser.anchorClicked.connect(self.on_link_clicked)
-        # Apply some styles to text browser
-        self.text_browser.setStyleSheet("QTextBrowser { font-size: 14px; padding: 10px; line-height: 1.5; }")
+        # Apply modern styling to text browser
+        self.text_browser.setStyleSheet("""
+            QTextBrowser { 
+                font-family: 'Segoe UI', Tahoma;
+                font-size: 14px; 
+                padding: 15px; 
+                line-height: 1.6; 
+                background-color: #050505;
+                color: #e0e0e0;
+                border: none;
+            }
+        """)
         
         layout.addWidget(self.text_browser)
         self.current_html = ""
         
     def load_transcript(self, txt_path):
         if not os.path.exists(txt_path):
-            self.text_browser.setHtml(f"<p>Dosya bulunamadı: {txt_path}</p>")
+            self.text_browser.setHtml(f"<p style='color: #888;'>Dosya bulunamadı: {txt_path}</p>")
             return
             
         with open(txt_path, 'r', encoding='utf-8') as f:
@@ -37,12 +47,13 @@ class TranscriptView(QWidget):
             if match:
                 h, m, s, text = match.groups()
                 ms = int((float(h)*3600 + float(m)*60 + float(s)) * 1000)
-                link = f'<a href="{ms}" style="text-decoration:none; color:#b32d24;"><b>[{h}:{m}:{s}]</b></a>'
-                html_lines.append(f"<p style='margin-bottom: 5px;'>{link} <span style='color:#ffffff;'>{text}</span></p>")
+                # Vibrant red link with bold weight
+                link = f'<a href="{ms}" style="text-decoration:none; color:#ff1f29;"><b>[{h}:{m}:{s}]</b></a>'
+                html_lines.append(f"<div style='margin-bottom: 8px;'>{link} <span style='color:#ffffff;'>{text}</span></div>")
             else:
-                html_lines.append(f"<p style='margin-bottom: 5px; color:#ffffff;'>{line.strip()}</p>")
+                html_lines.append(f"<div style='margin-bottom: 8px; color:#ffffff;'>{line.strip()}</div>")
                 
-        self.current_html = "".join(html_lines)
+        self.current_html = f"<div style='padding: 5px;'>{''.join(html_lines)}</div>"
         self.text_browser.setHtml(self.current_html)
         self.current_search_query = ""
         self.current_search_index = 0

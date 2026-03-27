@@ -30,5 +30,13 @@ class DataManager:
         self.records.append({'video_path': video_path, 'txt_path': txt_path})
         self.save()
         
+    def delete_record(self, video_path, txt_path):
+        self.records = [r for r in self.records if not (r['video_path'] == video_path and r['txt_path'] == txt_path)]
+        self.save()
+        
+    def delete_all_records(self):
+        self.records = []
+        self.save()
+        
     def get_all_records(self):
         return self.records

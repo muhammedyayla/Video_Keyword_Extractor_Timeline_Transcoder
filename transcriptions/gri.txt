@@ -7,168 +7,124 @@
 [00:00:49.000] Fotoğrafları ve sayede bir de şu CVP ile şunu kopyalamak gerektik
 [00:00:59.000] Sizin de ediskini erkelebeyi kullanıyorsunuz kerebektirmasada kropladıysanız bunu
 [00:01:06.000] Sonra editten de şurada açıklam ekranı
-[00:01:17.000] Leyrünü siliyoruz
-[00:01:23.000] Başka bir şey var burada tabi bunu da siliyoruz
-[00:01:30.000] Biz bunları sonuna import edeceğiz, kriçlerden de yine buradaki kriçi siliyoruz
-[00:01:38.000] Sonra file import tabi gelirse
-[00:01:54.000] import ve yırs
-[00:01:57.000] sonra dd skinleki
-[00:01:59.000] çćv pek pos ediyon
-[00:02:11.000] scvp monit
-[00:02:19.000] medyalarını getirdi.
-[00:02:22.000] Edeleleri de getirdi.
-[00:02:27.000] Eğer şey olursa gelmezse de buradan reyim port diyoruz.
-[00:02:32.000] Burada imacısın içinde.
-[00:02:37.000] Hangisi olacağını da hayır.
-[00:02:40.000] Şu Erdoğan yazıla çıklamaya iki tane gelmiş.
-[00:02:44.000] Bir Mevbe'nin bir de
-[00:02:47.000] Tület Bahçeli.
-[00:02:49.000] Bunu mesara şey yapmışlar.
-[00:02:55.000] Bir sene ya.
-[00:02:58.000] Şunu vereyim ben.
-[00:03:00.000] Bunun yazısı bizden gitmiyor.
-[00:03:02.000] Alttaki yazı devlet Bahçeli ve Mevbe'ye genel başkanı.
-[00:03:07.000] Bu resmin içerisinde var.
-[00:03:11.000] Onun yüzünden de data da
-[00:03:16.000] şurada sadece kontent dördü alıyor yani.
-[00:03:21.000] Bu eczemel de değişti.
-[00:03:24.000] Öyle istemişler.
-[00:03:26.000] Gösterceğim şimdi.
-[00:03:29.000] Örneğin.
-[00:03:35.000] Örneğin şurada yardımcısa
-[00:03:37.000] altta gözükmesi için mesela
-[00:03:40.000] bu kontent fethiyeliz üstte kontentiki bir yaltı.
-[00:03:49.000] Üç yardımcısı dörtte zaten şey açıklamak.
-[00:03:56.000] Bu açıklamaların bekrandığını vesaire medyalardan
-[00:04:03.000] Mesela ilk genel kalıbı
-[00:04:05.000] Rı import futeç diyerek
-[00:04:10.000] Futeç izin live ya çünkü
-[00:04:12.000] live dolu için yapamıyorum diyor.
-[00:04:17.000] Diğerek burada atıyorum.
-[00:04:20.000] Bunu kullanabiliriz.
-[00:04:22.000] Artık ne ver burada olanlar.
-[00:04:26.000] Bu kutu.
-[00:04:31.000] Bunu verirsek tabii yazı üst üste biner.
-[00:04:34.000] Bu çünkü
-[00:04:39.000] yazısı bizden gidiyor, kâce eden gidiyor.
-[00:04:43.000] Altında ki yazı direkti resmin içinde var.
-[00:04:46.000] Eğer resmin içinde yazı varsa
-[00:04:50.000] bu soldakini vereceğiz.
-[00:04:54.000] Tabii soldakini de
-[00:04:58.000] importunu
-[00:05:00.000] şuradan lider yazıla
-[00:05:02.000] açıklama olan şu alttaki dinlendiğe
-[00:05:04.000] değiştireceğiz.
-[00:05:07.000] Yani onun kodlamasında şöyle
-[00:05:09.000] yaptık.
-[00:05:11.000] Eğer şöyle
-[00:05:13.000] kısmı şöyle ise uzunsa
-[00:05:18.000] onun yukarıya
-[00:05:21.000] import edilecek.
-[00:05:26.000] Yani
-[00:05:31.000] şu arkadaki backgrounddan bahsediyorum.
-[00:05:34.000] Böyle kısa uzunsa
-[00:05:36.000] yukarıdekini
-[00:05:38.000] r import edilecek.
-[00:05:39.000] Eğer
-[00:05:41.000] böyle
-[00:05:44.000] fotoğrafın içinde yazı varsa
-[00:05:46.000] şu alttaki ne
-[00:05:48.000] reimport edilecek.
-[00:05:51.000] Başka burada baya
-[00:05:53.000] şeyler eklenmiş.
-[00:05:54.000] Mesela bu.
-[00:05:56.000] Tabii bunlar da masadan da
-[00:05:57.000] yine kroplamak gerekiyor.
-[00:06:02.000] Bunu mesela yetirdik.
+[00:01:16.000] Aynı ekranı ve layrını siliyoruz
+[00:01:23.000] Başka bir şey var burada, tabi bunu da siliyoruz
+[00:01:30.000] Biz bunları sonuna import edeceğiz, krizlerden de yine buradaki kriz siliyoruz
+[00:01:39.000] Sonra import tabi gelirse
+[00:01:54.000] Import layer sonra deliskinleki
+[00:01:59.000] Şu CVP'yi import ediyoruz
+[00:02:09.000] Bu hem krizi getirdi
+[00:02:13.000] Hem medya açıklam ekranı medyalarını getirdi
+[00:02:22.000] Hem de edit hele layrı da getirdi
+[00:02:28.000] Eğer şey olursa da gelmese de buradan import diyoruz
+[00:02:35.000] Burada imacısın içinde hangisi olacağına dair şu Erdoğan yazıla açıklamaya iki tane gelmiş
+[00:02:44.000] Bir MFN'in bir de dilet bahçeli
+[00:02:48.000] Bunu mesela şey yapmışlar
+[00:02:58.000] Şimdi vereyim ben
+[00:03:00.000] Bunu yazılsın, bizden gitmiyor alttaki yazı devlet bahçeli ve MFN'e başkanı
+[00:03:06.000] Bu resmin içerisinde var
+[00:03:13.000] On yüzünden de data da şurada sadece kontent 4 dolar oluyor
+[00:03:22.000] Bu eczema ile değişti, öyle istemişler
+[00:03:26.000] Şu göstereceğim şimdi
+[00:03:29.000] Örneğin
+[00:03:35.000] Örneğin şurada yardımcısı altta gözükmesi için mesela
+[00:03:41.000] Bu kontent 5 yıldız üstte kontent 2 bir yalı 3 yardımcısı 4 de zaten şey
+[00:03:54.000] Açıklamak
+[00:03:57.000] Bu açıklamaların bekrandığını vesaire medyalardan
+[00:04:02.000] Mesela ilk genel kalıbı
+[00:04:05.000] Rii import footage diyerek
+[00:04:10.000] Futeciz live diye çünkü live dolu için yapamıyorum
+[00:04:16.000] Diğerek burada atıyorum
+[00:04:20.000] Bunu kullanabiliriz artık ne ver burada olanlar
+[00:04:25.000] Bunu verirsek tabi yazı üst üste binir
+[00:04:31.000] Bu çünkü yazısı bizden gidiyor, kâjeden gidiyor
+[00:04:36.000] Altında ki yazı direkt resmin içinde var
+[00:04:41.000] Eğer resmin içinde yazı varsa
+[00:04:45.000] Bu soldakini vereceğiz
+[00:04:49.000] Tabi soldakini de
+[00:04:55.000] İmportunu şu oradan lider yazıla çıklama olan şu altta kinden değiştireceğiz
+[00:05:06.000] Yani onun kodlamasında şöyle yaptık
+[00:05:11.000] Eğer şöyle kısım şöyle ise uzunsa
+[00:05:18.000] Onun yukarıya import edecek
+[00:05:27.000] Yani
+[00:05:32.000] Şu arkadaki bekrandan bahsediyorum
+[00:05:35.000] Böyle kısım uzunsa
+[00:05:38.000] Yukardakini import edecek
+[00:05:42.000] Böyle fotoğrafın içinde yazı varsa
+[00:05:47.000] Şu altta kine reimport edecek
+[00:05:51.000] Başka burada bayağı şeyler eklenmiş
+[00:05:54.000] Mesela bu
+[00:05:56.000] Tabi bunlar da masadan da yine kroplamak gerekiyor
+[00:06:02.000] Bunu mesela getirdik
 [00:06:04.000] Bu da mesela yazının içinde tekst olduğu için
-[00:06:06.000] yine şunu alalım ekrandan.
-[00:06:09.000] Bunu bile ilmek gerekiyor.
-[00:06:15.000] Dur dur dur.
-[00:06:16.000] Devam ettirdim.
-[00:06:18.000] Dur dur dur.
-[00:06:19.000] Bir sonrakiini vermek için yine
-[00:06:21.000] sonrakiini verdim.
-[00:06:22.000] Devam ettirdim.
-[00:06:25.000] Şu sol taraf çiğli maskı
-[00:06:27.000] buraya
-[00:06:28.000] resim azasından vesaire
-[00:06:30.000] video görüntü neyi sartık neyi
-[00:06:32.000] istiyorsa
-[00:06:33.000] deselfe fiyo vesaire
-[00:06:35.000] olduğunu
-[00:06:36.000] kroplayıp konulacakmış.
-[00:06:40.000] Aynı şekilde bunun
-[00:06:42.000] yine
-[00:06:44.000] reimport
-[00:06:46.000] futec
-[00:06:47.000] tabi lavi de olduğu için
-[00:06:49.000] reimport futec
-[00:06:52.000] bu versiyonu da var.
-[00:06:54.000] Bu da
-[00:06:56.000] en içinde var. Mesela eni
-[00:06:58.000] şuysa eğer
-[00:07:00.000] yazı yok mu sen
-[00:07:01.000] bir şeyler
-[00:07:02.000] resimde
-[00:07:04.000] yazı var.
-[00:07:05.000] Bunu
-[00:07:06.000] bu eğer reimport etmem gerekiyor.
-[00:07:08.000] Eğer yazı yoksa
-[00:07:10.000] şunu mesela.
-[00:07:15.000] Yani
-[00:07:16.000] resmin içinde yazı
-[00:07:19.000] isim vesaire
-[00:07:21.000] titıl yoksa
-[00:07:22.000] bu
-[00:07:23.000] mesela bunu
-[00:07:25.000] bilelimince
-[00:07:26.000] aynı böyle burası
-[00:07:27.000] fetiyeliz
-[00:07:28.000] kontent
-[00:07:29.000] mesela buradan geliyor.
+[00:06:07.000] Şunu alalım ekranla
+[00:06:09.000] Bunu bilelim ek gerekiyor
+[00:06:14.000] Dur durdum
+[00:06:16.000] Devam ettirdim
+[00:06:18.000] Bir son ikini vermek için yine
+[00:06:21.000] Son ikini verdim devam ettirdim
+[00:06:24.000] Şu sol taraf çiğli masklı
+[00:06:27.000] Buraya resim azasından ve
+[00:06:30.000] Videoyu görüntü neyi saartık neyi istedin
+[00:06:33.000] Sff'i saire
+[00:06:35.000] Oldum kroplayıp konulacakmış
+[00:06:39.000] Aynı şekilde bunun
+[00:06:42.000] Yine
+[00:06:44.000] Reimport
+[00:06:46.000] Futeç
+[00:06:47.000] Tabi lavi de olduğu için
+[00:06:50.000] Reimport
+[00:06:52.000] Bu versiyonu da var
+[00:06:54.000] Bu da en içinde var
+[00:06:57.000] Mesela eni şu sayer
+[00:07:00.000] Rezmi yok mu sen de
+[00:07:02.000] Rezmi
+[00:07:04.000] Yazı var
+[00:07:06.000] Bunu bu reyli import etmem gerekiyor
+[00:07:08.000] Rezmi yoksa
+[00:07:10.000] Şunu mesela
+[00:07:12.000] Yani
+[00:07:16.000] Rezmi içinde yazı
+[00:07:20.000] İsim besere titıl yoksa
+[00:07:22.000] Bu
+[00:07:24.000] Serapunu bilelimince
+[00:07:26.000] Aynı böyle burası
+[00:07:28.000] Fetiyalı kontakt
+[00:07:29.000] Serapurdan geliyor
 [00:07:32.000] Şula
-[00:07:34.000] yine aynı şekilde
-[00:07:36.000] sadece kontent
-[00:07:37.000] dördü kullanmış oluyor.
-[00:07:40.000] mesela bunu
-[00:07:41.000] stop edeyim.
-[00:07:43.000] Sadece burası.
-[00:07:44.000] zaten burası
-[00:07:45.000] imden geliyor.
-[00:07:47.000] Editor
-[00:07:48.000] kısmı da
-[00:07:49.000] yine
-[00:07:50.000] buradan
-[00:07:51.000] canlı açıklamaya
-[00:07:52.000] gücürledik.
-[00:07:54.000] gücürledik.
-[00:07:55.000] buraya dört tane
-[00:07:57.000] içeriik
-[00:07:58.000] girecek.
-[00:07:59.000] yine
-[00:08:01.000] yanlışlık olmasın diye
-[00:08:03.000] hepsi adı soyadı
-[00:08:04.000] vesaire
-[00:08:05.000] titri
-[00:08:06.000] ve açıklaması
-[00:08:08.000] girilsin.
-[00:08:09.000] Yürümlesi gerekiyor
-[00:08:10.000] yoksa
-[00:08:11.000] atıyorum.
-[00:08:12.000] Şunlar
-[00:08:13.000] girilmezse
-[00:08:14.000] ekrana
-[00:08:17.000] böyle de
-[00:08:18.000] gidebilir.
-[00:08:19.000] Pardon.
-[00:08:20.000] Şimdi tabii
-[00:08:22.000] gücürlediğini
-[00:08:23.000] varsa yalım.
-[00:08:24.000] Son makine.
-[00:08:26.000] Son makine
-[00:08:30.000] ver.
-[00:08:31.000] Son makine ver.
-[00:08:33.000] Son makine ver.
-[00:08:35.000] Şöyle
-[00:08:37.000] gidebilir yani ekramı.
+[00:07:34.000] Yine aynı şekilde
+[00:07:36.000] Sadece kontakt dördü kullanmış oluyor
+[00:07:38.000] Serapunu stop edeyim
+[00:07:42.000] Sadece burası
+[00:07:44.000] Zaten burası imden geliyor
+[00:07:46.000] Editor kısmı da
+[00:07:48.000] Yine
+[00:07:50.000] Burdan
+[00:07:52.000] Canlı açıklamaya günceledik
+[00:07:54.000] Günceledik
+[00:07:56.000] Buraya 4 tane
+[00:07:58.000] İçerik girecek
+[00:08:00.000] Yine
+[00:08:02.000] Yanlış çık olmasın diye hepsi adı
+[00:08:04.000] Soya da
+[00:08:06.000] Sajı titri
+[00:08:08.000] Açıklaması girelim
+[00:08:10.000] Yine yeri yoksa
+[00:08:12.000] Atıyorum
+[00:08:14.000] Şunlar girilmezse
+[00:08:16.000] Ekranı böyle de gidebilir
+[00:08:18.000] Pardon
+[00:08:20.000] Şunu tabi güncelediğini varsayalım
+[00:08:22.000] Son makine
+[00:08:24.000] Son makine ver
+[00:08:26.000] Son makine ver
+[00:08:28.000] Son makine ver
+[00:08:30.000] Son makine ver
+[00:08:32.000] Son makine ver
+[00:08:34.000] Herkese
+[00:08:36.000] Şöyle gidebilir yani ekranı
+[00:08:38.000] Şöyle gidebilir yani ekranı
+[00:08:40.000] Buya
+[00:08:42.000] Buya
+[00:08:44.000] Buya
+[00:08:46.000] Buya
